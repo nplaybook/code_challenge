@@ -11,10 +11,12 @@
 # sample output:
 # 2
 
-counter = 0
 def count_substring(string, sub_string):
+    counter = 0
+    # define shifting
     for i in range(0, len(string)-len(sub_string)+1):
-        try:   
+        try:
+            # number of characters to be matched
             if string[i:i+len(sub_string)] == sub_string:
                 counter += 1
         except IndexError:
