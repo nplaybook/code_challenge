@@ -11,8 +11,11 @@ class Solution:
         # replace 0 in nums1 by nums2 element
         for i in range(len(self.num1)):
             if self.num1[i] == 0:
-                self.num1[i] = self.num2.pop()
-                
+                try:
+                    self.num1[i] = self.num2.pop()
+                except:
+                    print("Num 2 has 0 element. You may continue")
+                    pass
         # sorting
         i = 0
         while i < len(self.num1) - 1:
